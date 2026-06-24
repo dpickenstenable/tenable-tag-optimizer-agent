@@ -45,65 +45,47 @@ This agent helps security and IT teams:
 
 ---
 
-## 🚀 Installation
+## 🚀 Quick Start
 
-### Prerequisites
+### Installation
 
-- **Claude Code** installed ([claude.ai/code](https://claude.ai/code))
-- **Tenable VM or Tenable One** account
-- **API Access Keys** OR **Tenable MCP Server** configured
-- **"Can Manage" permission on Tags** in Tenable (required to create tags)
+See **[INSTALL.md](INSTALL.md)** for complete installation and usage instructions.
 
-### Method 1: Install from GitHub (Recommended)
-
+**Quick install:**
 ```bash
-# Clone the repository
+cd ~/.claude/agents
 git clone https://github.com/dpickenstenable/tenable-tag-optimizer-agent.git
-
-# Copy agent to Claude Code agents directory
-cp tenable-tag-optimizer-agent/agent.md ~/.claude/agents/tenable-tag-optimizer.md
-
-# Verify installation
-ls -la ~/.claude/agents/tenable-tag-optimizer.md
+cp tenable-tag-optimizer-agent/agent.md tenable-tag-optimizer.md
 ```
 
-### Method 2: Manual Installation
+### How to Use
 
-1. Download `agent.md` from this repository
-2. Place it in your Claude Code agents directory:
-   - **macOS/Linux:** `~/.claude/agents/tenable-tag-optimizer.md`
-   - **Windows:** `%USERPROFILE%\.claude\agents\tenable-tag-optimizer.md`
+**You interact with this agent using natural language in Claude Code** - no coding required!
+
+Open Claude Code and simply say:
+```
+Run the Tenable Tag Optimizer
+```
+
+The agent will analyze your assets and recommend a clean tag taxonomy.
+
+**Behind the scenes**, Claude Code executes the agent. You don't need to write JavaScript `Agent()` calls or technical commands - just describe what you want in plain English.
 
 ---
 
-## ⚡ Quick Start
+## 📖 Full Documentation
 
-### Using with Tenable MCP Server (Recommended)
+- **[INSTALL.md](INSTALL.md)** - Complete installation and usage guide
+  - What you need
+  - Step-by-step setup
+  - Authentication options
+  - Natural language examples
+  - Complete walkthrough
+  - 10 advanced usage scenarios
+  - Troubleshooting
+  - Security & privacy
 
-```
-In Claude Code:
-> Run the Tenable Tag Optimizer
-```
-
-The agent will:
-1. Analyze your asset inventory (OS, hostnames, networks, software)
-2. Review existing tags to avoid duplicates
-3. Detect patterns and recommend 5-8 tag categories
-4. Present recommendations for your approval
-5. Create tags automatically after confirmation
-6. Optionally apply tags to assets
-
-### Using with Direct API Authentication
-
-```bash
-export TENABLE_ACCESS_KEY="your_access_key"
-export TENABLE_SECRET_KEY="your_secret_key"
-```
-
-Then run:
-```
-> Run the Tenable Tag Optimizer
-```
+- **[README.md](README.md)** - This file (overview and technical details)
 
 ---
 
