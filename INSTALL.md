@@ -129,6 +129,50 @@ recommend a clean tag taxonomy
 
 **Behind the scenes**, Claude Code will execute the agent. You don't need to write any JavaScript or technical commands.
 
+### Using Opus Model for More Thorough Analysis
+
+By default, agents run with the Sonnet model. For more comprehensive, thorough analysis, you can upgrade to the **Opus model with high effort**.
+
+**When to use Opus:**
+- Large asset inventories (1000+ assets), establishing new tagging taxonomy, quarterly tag audits, migrating from legacy tags
+- Need deeper analysis and more detailed recommendations
+- Want exhaustive reports with step-by-step details
+- Preparing for audits requiring comprehensive documentation
+- First-time analysis of a new environment
+
+**How to use Opus:**
+
+In your Claude Code conversation, specify the model before invoking the agent:
+
+```
+Switch to Opus model
+
+Then run the Tenable Tag Optimizer with comprehensive tag taxonomy analysis
+```
+
+**Or use the direct command:**
+
+```
+/model opus
+
+Run the Tenable Tag Optimizer with comprehensive tag taxonomy analysis
+```
+
+**What changes with Opus + high effort:**
+- ✅ More detailed analysis for each finding
+- ✅ Deeper context about why issues matter
+- ✅ More comprehensive recommendations
+- ✅ Additional cross-references between related items
+- ✅ More thorough validation steps
+- ✅ Longer, more detailed reports (expect 2-3x length)
+
+**Trade-offs:**
+- ⏱️ Takes longer to complete (2-5x slower than Sonnet)
+- 💰 Uses more tokens (higher cost)
+- 📄 Generates longer reports (more to read)
+
+**Recommendation:** Start with Sonnet for routine analysis, use Opus for quarterly deep-dives or audit preparation.
+
 ### What Happens Next
 
 1. **Agent starts** - Claude Code spawns the Tenable Tag Optimizer
